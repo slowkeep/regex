@@ -41,3 +41,9 @@ grep -HanrE "([^A-Z0-9]|^)(AKIA|A3T|AGPA|AIDA|AROA|AIPA|ANPA|ANVA|ASIA)[A-Z0-9]{
 ```
 grep -HanroE "([^A-Za-z0-9+/]|^)(eyJ|YTo|Tzo|PD[89]|aHR0cHM6L|aHR0cDo|rO0)[%a-zA-Z0-9+/]+={0,2}" *
 ```
+
+### CORS
+
+```
+grep -HnriE "Access-Control-Allow" *
+```
