@@ -65,3 +65,9 @@ grep -Hnri "firebaseio.com" *
 ```
 grep -HnriE "django\|laravel\|symfony\|graphite\|grafana\|X-Drupal-Cache\|struts\|code ?igniter\|cake ?php\|grails\|elastic ?search\|kibana\|log ?stash\|tomcat\|jenkins\|hudson\|com.atlassian.jira\|Apache Subversion\|Chef Server\|RabbitMQ Management\|Mongo\|Travis CI - Enterprise\|BMC Remedy\|artifactory" * 
 ```
+
+### IP´s
+
+```
+grep -HnroE "(([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\\.){3}([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])" *
+```
