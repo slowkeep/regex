@@ -29,3 +29,15 @@ Here's an example of how you could use this pattern in grep to find all emails.
 ```
 grep -rEo "[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,6}" *
 ```
+
+### AWSKeys
+
+```
+grep -HanrE "([^A-Z0-9]|^)(AKIA|A3T|AGPA|AIDA|AROA|AIPA|ANPA|ANVA|ASIA)[A-Z0-9]{12,}" *
+```
+
+### BASE64
+
+```
+grep -HanroE "([^A-Za-z0-9+/]|^)(eyJ|YTo|Tzo|PD[89]|aHR0cHM6L|aHR0cDo|rO0)[%a-zA-Z0-9+/]+={0,2}" *
+```
