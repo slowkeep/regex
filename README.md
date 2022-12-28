@@ -53,3 +53,9 @@ grep -HnriE "Access-Control-Allow" *
 ```
 grep -HnraiE "(Application-Trace|Routing Error|DEBUG\"? ?[=:] ?True|Caused by:|stack trace:|Microsoft .NET Framework|Traceback|[0-9]:in |#line [0-9]|SQLSTATE)" *
 ```
+
+### firebase
+
+```
+grep -Hnri "firebaseio.com" * 
+```
