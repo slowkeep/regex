@@ -1,28 +1,23 @@
 # REGEX Pentest
 ### URL´s
 
-Simple URL regex:
+Here's an example of how you could use this pattern in grep to find all domains and subdomains in a file:
 ```
-/https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)/
+grep -Eor '([a-zA-Z0-9-]+\.)+[a-zA-Z]{2,}' file.txt
 ```
-This regular expression will match most basic URLs that start with http:// or https://. It includes optional support for a www. subdomain.
 
-URL with optional protocol and subdomain:
-```
-/(https?:\/\/)?(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)/
-```
-This regular expression is similar to the previous one, but it allows the protocol and www. subdomain to be optional.
+Here's an example of how you could use this pattern in grep to find all internationalized domains and subdomains.
 
-URL with support for multiple subdomains:
 ```
-/(https?:\/\/)?(([\w-]+\.)+[a-zA-Z]{2,})(:[0-9]{1,5})?(\/[\w-.\/?%&=]*)?/
+grep -Pro '([\p{L}\p{N}-]+\.)+[\p{L}\p{N}-]{2,}' file.txt
 ```
-This regular expression allows for multiple subdomains and also supports an optional port number.
+Here is another complex regular expression pattern that you can use to find all domains and subdomains in a string:
+```
+grep -Pro '(([\p{L}\p{N}-]+\.)|(\[\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}\]))+[\p{L}\p{N}-]{2,}' *
+```
 
-URL with support for query parameters:
-```
-/(https?:\/\/)?(([\w-]+\.)+[a-zA-Z]{2,})(:[0-9]{1,5})?(\/[\w-.\/?%&=]+)?(\?[\w-.=&]+)?/
-```
-This regular expression is similar to the previous one, but it also supports optional query parameters.
+Here's an example of how you could use this pattern in grep to find all domains and subdomains in a file
 
-Keep in mind that regular expressions can be complex and it is not always easy to capture all possible variations of a URL. You may need to modify these regular expressions to fit your specific needs.
+```
+grep -Po '(([\p{L}\p{N}-]+\.)|(\[\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}\]))+((xn--[\p{L}\p{N}-]+)|([\p{L}\p{N}-]{2,}))' *
+```
