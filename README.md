@@ -47,3 +47,9 @@ grep -HanroE "([^A-Za-z0-9+/]|^)(eyJ|YTo|Tzo|PD[89]|aHR0cHM6L|aHR0cDo|rO0)[%a-zA
 ```
 grep -HnriE "Access-Control-Allow" *
 ```
+
+### DEBUG
+
+```
+grep -HnraiE "(Application-Trace|Routing Error|DEBUG\"? ?[=:] ?True|Caused by:|stack trace:|Microsoft .NET Framework|Traceback|[0-9]:in |#line [0-9]|SQLSTATE)" *
+```
