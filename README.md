@@ -59,3 +59,9 @@ grep -HnraiE "(Application-Trace|Routing Error|DEBUG\"? ?[=:] ?True|Caused by:|s
 ```
 grep -Hnri "firebaseio.com" * 
 ```
+
+### FW
+
+```
+grep -HnriE "django\|laravel\|symfony\|graphite\|grafana\|X-Drupal-Cache\|struts\|code ?igniter\|cake ?php\|grails\|elastic ?search\|kibana\|log ?stash\|tomcat\|jenkins\|hudson\|com.atlassian.jira\|Apache Subversion\|Chef Server\|RabbitMQ Management\|Mongo\|Travis CI - Enterprise\|BMC Remedy\|artifactory" * 
+```
