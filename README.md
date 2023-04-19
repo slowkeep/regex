@@ -65,3 +65,25 @@ grep -HnriE "django\|laravel\|symfony\|graphite\|grafana\|X-Drupal-Cache\|struts
 ```
 grep -HnroE "(([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\\.){3}([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])" *
 ```
+
+###  Dates of birth
+```
+\b((19|20)\d{2})[-/.]?(0[1-9]|1[0-2])[-/.]?(0[1-9]|[12][0-9]|3[01])\b
+```
+### Passport numbers
+
+```
+\b[A-Z]{2}\d{7}\b
+```
+
+### International Bank Account Numbers (IBANs): 
+
+```
+\b[A-Z]{2}\d{2}\s?(?=(\d{4}\s?){4})(\d{4}\s?){3}\d{1,4}\b
+```
+
+### Health Insurance Portability and Accountability Act (HIPAA) identifiers: 
+
+```
+(SSN|NPI|EIN|UPIN|HICN|MEDICAID|MEDICARE)
+```
